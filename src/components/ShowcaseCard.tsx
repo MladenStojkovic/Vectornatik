@@ -10,7 +10,6 @@ interface ShowcaseCardProps {
 const ShowcaseCard: React.FC<ShowcaseCardProps> = ({
   title,
   description,
-  image,
   className = "",
 }) => {
   return (
