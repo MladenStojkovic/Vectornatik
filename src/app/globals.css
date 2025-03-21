@@ -2,7 +2,7 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #333333;
   --font-primary: var(--font-londrina-solid);
 }
 
@@ -14,6 +14,8 @@
   --font-roboto: var(--font-roboto);
   --font-sen: var(--font-sen);
   --text-6xl: 3.875rem;
+  --text-3xl: 2rem;
+  --text-xxs: 0.625rem;
 }
 
 /* @media (prefers-color-scheme: dark) {

@@ -27,7 +27,7 @@ export default function Home() {
           variant="secondary"
         />
       </section>
-      <section>
+      <section className="mb-9">
         <div className="relative mb-5 w-36 h-6 mx-auto">
           <Image
             src="splash.svg"
@@ -39,8 +39,38 @@ export default function Home() {
             Who we are?
           </h4>
         </div>
-        <h3 className="text-center px-2.5 mb-5 uppercase text-2xl">
+        <h3 className="text-center px-2.5 mb-9 uppercase text-2xl">
           We’re a designers from Serbia with a passion for pixels.
+        </h3>
+        <Image
+          src="people.svg"
+          alt="People"
+          width="200"
+          height="122"
+          className="mx-auto"
+        />
+        <p className="text-center font-roboto px-2">
+          Based in Niš, Serbia, we transform your ideas into visual
+          masterpieces, Partner with us for creative solutions that make your
+          brand stand out. Based in Niš, Serbia, we transform your ideas into
+          visual masterpieces, Partner with us for creative solutions that make
+          your brand stand out.
+        </p>
+      </section>
+      <section>
+        <div className="relative mb-5 w-36 h-6 mx-auto">
+          <Image
+            src="splash.svg"
+            alt="Background Image"
+            fill
+            className="absolute top-0 left-0 z-[-1]"
+          />
+          <h4 className="text-white text-center font-roboto text-xs uppercase absolute top-5/12 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full">
+            Take a look
+          </h4>
+        </div>
+        <h3 className="text-center px-2.5 mb-9 uppercase text-3xl">
+          Recent work
         </h3>
       </section>
     </main>

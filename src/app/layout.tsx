@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Roboto, Londrina_Solid, Sen } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 const londrinaSolid = Londrina_Solid({
   variable: "--font-londrina-solid",
@@ -32,10 +33,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${londrinaSolid.variable} ${roboto.variable} ${sen.variable} antialiased`}
+        className={`${londrinaSolid.variable} ${roboto.variable} ${sen.variable} antialiased text-foreground`}
       >
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );
