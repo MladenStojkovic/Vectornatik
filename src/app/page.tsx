@@ -3,6 +3,7 @@ import ShowcaseCard from "@/components/ShowcaseCard";
 import Image from "next/image";
 import Link from "next/link";
 import FAQ from "@/components/FAQ";
+import { Testimonial } from "@/components/Testimonial";
 
 const FAQs = [
   {
@@ -24,23 +25,44 @@ const FAQs = [
   {
     title: "What is your pricing structure?",
     description: "Lorem ipsum",
-  }
+  },
+];
+
+const testimonials = [
+  {
+    text: `Narayan's product design skills are nothing short of exceptional. His ability to infuse creativity and innovation into every project is truly commendable and he does so with style. 
+    From concept to execution, Narayan consistently demonstrates a keen eye for detail and a unique approach to design that sets his work apart.`,
+    name: "Name Surname",
+    profession: "Profession",
+  },
+  {
+    text: `Narayan's product design skills are nothing short of exceptional. His ability to infuse creativity and innovation into every project is truly commendable and he does so with style. 
+    From concept to execution, Narayan consistently demonstrates a keen eye for detail and a unique approach to design that sets his work apart.`,
+    name: "Name Surname",
+    profession: "Profession",
+  },
+  {
+    text: `Narayan's product design skills are nothing short of exceptional. His ability to infuse creativity and innovation into every project is truly commendable and he does so with style. 
+    From concept to execution, Narayan consistently demonstrates a keen eye for detail and a unique approach to design that sets his work apart.`,
+    name: "Name Surname",
+    profession: "Profession",
+  },
 ];
 
 export default function Home() {
   return (
     <main className="container mx-auto px-6">
       <div className="relative mb-5 w-36 h-6 mx-auto">
-          <Image
-            src="splash.svg"
-            alt="Background Image"
-            fill
-            className="absolute top-0 left-0 z-[-1]"
-          />
-          <h4 className="text-white text-center font-roboto text-xs uppercase absolute top-5/12 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full">
-            Welcome
-          </h4>
-        </div>
+        <Image
+          src="splash.svg"
+          alt="Background Image"
+          fill
+          className="absolute top-0 left-0 z-[-1]"
+        />
+        <h4 className="text-white text-center font-roboto text-xs uppercase absolute top-5/12 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full">
+          Welcome
+        </h4>
+      </div>
       <h2 className="text-6xl text-center uppercase mb-5">
         We are a product design team from Serbia.
       </h2>
@@ -155,7 +177,7 @@ export default function Home() {
           <FAQ key={index} title={faq.title} description={faq.description} />
         ))}
       </section>
-      <section className="mb-9">
+      <section className="mb-9 px-11">
         <div className="relative mb-5 w-60 h-9 mx-auto">
           <Image
             src="splash.svg"
@@ -170,6 +192,14 @@ export default function Home() {
         <h3 className="text-center px-2.5 mb-9 text-3xl uppercase">
           Testimonials
         </h3>
+        {testimonials.map((testimonial, index) => (
+          <Testimonial
+            key={index}
+            text={testimonial.text}
+            name={testimonial.name}
+            profession={testimonial.profession}
+          />
+        ))}
       </section>
     </main>
   );
