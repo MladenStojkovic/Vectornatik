@@ -24,17 +24,17 @@ const Header = () => {
 
         <nav
           id="menu"
-          className={`absolute top-16 left-0 w-full md:w-auto md:static md:flex ${
+          className={`absolute top-16 right-2.5 md:w-auto md:static md:flex w-28 ${
             isMenuOpen
               ? "opacity-100 translate-y-0 visible"
               : "opacity-0 translate-y-4 invisible"
-          } transition-all duration-500 ease-in-out border-3`}
+          } transition-all duration-500 ease-in-out border-3 border-foreground bg-white`}
         >
-          <ul className="text-center md:flex md:space-x-8 p-4 md:p-0">
+          <ul className="text-center md:flex md:space-x-8 p-2.5">
             <li>
               <a
                 href="#"
-                className="text-black md:text-black hover:bg-gray-700 md:hover:bg-transparent block p-2"
+                className="text-black md:text-black hover:bg-gray-700 md:hover:bg-transparent block p-1.5"
               >
                 /Work
               </a>
@@ -42,7 +42,7 @@ const Header = () => {
             <li>
               <a
                 href="#"
-                className="text-black md:text-black hover:bg-gray-700 md:hover:bg-transparent block p-2"
+                className="text-black md:text-black hover:bg-gray-700 md:hover:bg-transparent block p-1.5"
               >
                 /About
               </a>
@@ -50,7 +50,7 @@ const Header = () => {
             <li>
               <a
                 href="#"
-                className="text-black md:text-black hover:bg-gray-700 md:hover:bg-transparent block p-2"
+                className="text-black md:text-black hover:bg-gray-700 md:hover:bg-transparent block p-1.5"
               >
                 /Contact
               </a>
