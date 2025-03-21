@@ -30,6 +30,17 @@ const FAQs = [
 export default function Home() {
   return (
     <main className="container mx-auto px-6">
+      <div className="relative mb-5 w-36 h-6 mx-auto">
+          <Image
+            src="splash.svg"
+            alt="Background Image"
+            fill
+            className="absolute top-0 left-0 z-[-1]"
+          />
+          <h4 className="text-white text-center font-roboto text-xs uppercase absolute top-5/12 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full">
+            Welcome
+          </h4>
+        </div>
       <h2 className="text-6xl text-center uppercase mb-5">
         We are a product design team from Serbia.
       </h2>
