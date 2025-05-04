@@ -52,7 +52,10 @@ const testimonials = [
 export default function Home() {
   return (
     <main className="container mx-auto px-6">
-      <div className="relative mb-5 w-36 h-6 mx-auto">
+      <section className="md:flex max-w-[529]">
+      <Image src="rocket.svg" width="371" height="571" alt="rocket" className="mx-auto absolute right-[-12]"/>
+      <div>
+      <div className="relative mb-5 w-36 h-6 mx-auto md:mb-7.5 md:mx-0 md:h-[35]">
         <Image
           src="splash.svg"
           alt="Background Image"
@@ -63,7 +66,7 @@ export default function Home() {
           Welcome
         </h4>
       </div>
-      <h2 className="text-6xl text-center uppercase mb-5">
+      <h2 className="text-6xl text-center uppercase mb-5 md:text-left md:mb-7.5 leading-[100%]">
         We are a product design team from Serbia.
       </h2>
       <section className="mb-25">
@@ -72,9 +75,9 @@ export default function Home() {
           alt="separator"
           width="112"
           height="4"
-          className="mx-auto mb-2.5"
+          className="mx-auto mb-2.5 md:mx-0"
         />
-        <h3 className="text-center font-roboto px-2.5 mb-5">
+        <h3 className="text-center font-roboto px-2.5 mb-5 md:text-left md:px-0 md:mb-[65] md:leading-7">
           Based in Niš, Serbia, we transform your ideas into visual
           masterpieces, Partner with us for creative solutions that make your
           brand stand out.
@@ -85,6 +88,8 @@ export default function Home() {
           className="mb-2.5"
           variant="secondary"
         />
+      </section>
+      </div>
       </section>
       <section className="mb-9">
         <div className="relative mb-5 w-36 h-6 mx-auto">
