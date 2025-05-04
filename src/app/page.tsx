@@ -51,7 +51,7 @@ const testimonials = [
 
 export default function Home() {
   return (
-    <main className="container mx-auto px-6">
+    <main className="container mx-auto px-6 overflow-x-hidden relative">
       <section className="md:flex max-w-[529]">
       <Image src="rocket.svg" width="371" height="571" alt="rocket" className="mx-auto absolute right-[-34]"/>
       <div>
@@ -103,17 +103,17 @@ export default function Home() {
             Who we are?
           </h4>
         </div>
-        <h3 className="text-center px-2.5 mb-9 uppercase text-2xl">
-          We’re a designers from Serbia with a passion for pixels.
+        <h3 className="text-center px-2.5 mb-9 uppercase text-2xl md:text-7xl md:mb-[110]">
+          We’re a designers from<br className="hidden md:block"/> Serbia<br className="hidden md:block"/>  with a passion for pixels.
         </h3>
         <Image
           src="people.svg"
           alt="People"
           width="200"
           height="122"
-          className="mx-auto"
+          className="mx-auto md:w-[432]"
         />
-        <p className="text-center font-roboto px-2 mt-9">
+        <p className="text-center font-roboto px-2 mt-9 md:my-[110] md:w-[702] mx-auto md:text-xl md:px-0">
           Based in Niš, Serbia, we transform your ideas into visual
           masterpieces, Partner with us for creative solutions that make your
           brand stand out. Based in Niš, Serbia, we transform your ideas into
