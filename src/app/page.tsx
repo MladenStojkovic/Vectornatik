@@ -52,13 +52,13 @@ const testimonials = [
 export default function Home() {
   return (
     <main className="container mx-auto px-6 relative">
-      <section className="md:flex max-w-[529]">
+      <section className="md:flex md:max-w-[529]">
         <Image
           src="rocket.svg"
           width="371"
           height="571"
           alt="rocket"
-          className="mx-auto absolute right-[-34]"
+          className="mx-auto absolute right-[-34] hidden md:block"
         />
         <div>
           <div className="relative mb-5 w-36 h-6 mx-auto md:mb-[36] md:mx-0 md:h-[35]">
