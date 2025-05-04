@@ -31,9 +31,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="overflow-x-hidden">
       <body
-        className={`${londrinaSolid.variable} ${roboto.variable} ${sen.variable} antialiased text-foreground`}
+        className={`${londrinaSolid.variable} ${roboto.variable} ${sen.variable} antialiased text-foreground overflow-x-hidden`}
       >
         <Header />
         {children}
