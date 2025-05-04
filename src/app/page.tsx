@@ -132,24 +132,40 @@ export default function Home() {
           Recent work
         </h3>
         <ShowcaseCard
-          title="Lorem ipsum"
-          description="Branding & App"
+          title="Service App"
+          description="Product Design"
           className="mb-5"
+          src="/Service app.png"
+          width={326.62}
+          height={204.31}
+          alt="service app image"
         />
         <ShowcaseCard
-          title="Lorem ipsum"
-          description="Branding & App"
+          title="Fintech app"
+          description="Service Design"
           className="mb-5"
+          src="/fintech-app-1.png"
+          width={324.71}
+          height={205.84}
+          alt="fintech app preview"
         />
         <ShowcaseCard
-          title="Lorem ipsum"
-          description="Branding & App"
+          title="Game Shop"
+          description="Branding"
           className="mb-5"
+          src="/game-shop.png"
+          width={298.11}
+          height={201.97}
+          alt="game shop preview"
         />
         <ShowcaseCard
-          title="Lorem ipsum"
-          description="Branding & App"
+          title="Fintech App"
+          description="Service Design"
           className="mb-5"
+          src="/fintech-app-2.png"
+          width={325.67}
+          height={202.37}
+          alt="fintech app preview"
         />
         <div className="text-center">
           <Link

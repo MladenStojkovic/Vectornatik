@@ -6,12 +6,12 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
+    setIsMenuOpen((prev) => !prev);
   };
 
   return (
     <header>
-      <div className="container px-6 font-primary mx-auto py-6 flex justify-between items-center">
+      <div className="container px-6 font-primary mx-auto py-6 flex justify-between items-center relative">
         <Image src="/logo.svg" alt="Vectornatik" width="127" height="25" />
 
         <button
@@ -22,19 +22,18 @@ const Header = () => {
           &#9776;
         </button>
 
-        <nav
-          id="menu"
-          className={`absolute top-16 right-2.5 md:w-auto md:static md:flex w-28 ${
+        <div
+          className={`absolute top-16 left-0 md:w-auto z-10 md:static md:flex w-full overflow-hidden transition-all duration-500 ease-in-out border-3 border-foreground bg-white ${
             isMenuOpen
-              ? "opacity-100 translate-y-0 visible"
-              : "opacity-0 translate-y-4 invisible"
-          } transition-all duration-500 ease-in-out border-3 border-foreground bg-white`}
+              ? "opacity-100 translate-y-0 max-h-[300px] visible"
+              : "opacity-0 translate-y-4 max-h-0 invisible"
+          }`}
         >
-          <ul className="text-center md:flex md:space-x-8 p-2.5">
+          <ul className="flex flex-col md:flex-row text-center md:space-x-8 p-4">
             <li>
               <a
                 href="#"
-                className="text-black md:text-black hover:bg-gray-700 md:hover:bg-transparent block p-1.5"
+                className="text-black hover:bg-gray-700 md:hover:bg-transparent block p-1.5"
               >
                 /Work
               </a>
@@ -42,7 +41,7 @@ const Header = () => {
             <li>
               <a
                 href="#"
-                className="text-black md:text-black hover:bg-gray-700 md:hover:bg-transparent block p-1.5"
+                className="text-black hover:bg-gray-700 md:hover:bg-transparent block p-1.5"
               >
                 /About
               </a>
@@ -50,13 +49,13 @@ const Header = () => {
             <li>
               <a
                 href="#"
-                className="text-black md:text-black hover:bg-gray-700 md:hover:bg-transparent block p-1.5"
+                className="text-black hover:bg-gray-700 md:hover:bg-transparent block p-1.5"
               >
                 /Contact
               </a>
             </li>
           </ul>
-        </nav>
+        </div>
       </div>
     </header>
   );
