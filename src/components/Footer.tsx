@@ -7,10 +7,10 @@ const Footer: React.FC = () => {
     <footer>
       <div className="container px-6 mb-2.5 md:mb-[100] mx-auto md:px-16 md:flex items-end justify-between">
         <div>
-          <p className="py-2.5 text-center uppercase bg-[#3F3F3F] text-white font-sen text-xl mb-3 lg:text-2xl px-4 lg:px-[50]">
+          <p className="py-2.5 font-extrabold text-center uppercase bg-[#3F3F3F] text-white font-sen text-2xl mb-3 sm:text-xl px-4 lg:px-[50]">
             LET’S WORK TOGETHER
           </p>
-          <div className="bg-primary p-4 font-sen text-base text-white relative border-2 border-foreground mb-9">
+          <div className="bg-primary p-4 font-sen text-base text-white relative border-2 border-foreground mb-9 md:mb-0">
             <div className="w-3 h-3 rounded-full bg-foreground absolute top-[-7] left-[-7]"></div>
             <div className="w-3 h-3 rounded-full bg-foreground absolute top-[-7] right-[-7]"></div>
             <div className="w-3 h-3 rounded-full bg-foreground absolute bottom-[-7] left-[-7]"></div>
@@ -19,13 +19,13 @@ const Footer: React.FC = () => {
             <p>vectornatic.rs</p>
           </div>
         </div>
-        <div className="grid grid-cols-3 gap-4 mb-9 min-w-[366]">
+        <div className="grid grid-cols-3 gap-4 mb-9 sm:mb-0 min-w-[366] md:min-w-[320] lg:min-w-[366] items-end">
           {["instagram.svg", "linkedin.svg", "facebook.svg"].map(
             (icon, index) => (
               <Link
                 key={index}
                 href="#"
-                className="relative border border-foreground flex items-center justify-center aspect-square group"
+                className="relative border-2 border-foreground flex items-center justify-center aspect-square group"
               >
                 <div className="w-3 h-3 rounded-full bg-foreground absolute top-[-7px] left-[-7px]"></div>
                 <div className="w-3 h-3 rounded-full bg-foreground absolute top-[-7px] right-[-7px]"></div>

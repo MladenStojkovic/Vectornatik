@@ -52,13 +52,13 @@ const testimonials = [
 export default function Home() {
   return (
     <main className="container mx-auto px-6 relative">
-      <section className="md:flex md:max-w-[529]">
+      <section className="md:flex md:max-w-[529] xl:ml-20">
         <Image
           src="rocket.svg"
           width="371"
           height="571"
           alt="rocket"
-          className="mx-auto absolute right-[-34] hidden md:block"
+          className="mx-auto absolute right-[-120] xl:right-0 2xl:right-0 hidden md:block xl:w-[431] xl:top-[-48]"
         />
         <div>
           <div className="relative mb-5 w-36 h-6 mx-auto md:mb-[36] md:mx-0 md:h-[35]">
@@ -72,7 +72,7 @@ export default function Home() {
               Welcome
             </h4>
           </div>
-          <h2 className="text-6xl text-center uppercase mb-5 md:text-left md:mb-10 leading-[100%]">
+          <h2 className="text-6xl xl:text-7xl text-center uppercase mb-5 md:text-left md:mb-10 xl:mb-5 leading-[100%]">
             We are a product design team from Serbia.
           </h2>
           <section className="mb-25">
@@ -83,22 +83,39 @@ export default function Home() {
               height="4"
               className="mx-auto mb-2.5 md:mx-0"
             />
-            <h3 className="text-center font-roboto px-2.5 mb-5 md:text-left md:px-0 md:mb-[75] md:leading-7">
+            <h3 className="text-center font-roboto px-2.5 mb-5 md:text-left md:px-0 md:mb-[75] xl:mb-[55] md:leading-7">
               Based in Niš, Serbia, we transform your ideas into visual
               masterpieces, Partner with us for creative solutions that make
               your brand stand out.
             </h3>
-            <Button label="Make a call" className="mb-2.5" />
-            <Button
-              label="Explore our services"
-              className="mb-2.5"
-              variant="secondary"
-            />
+            <div className="xl:flex xl:gap-5">
+              <Button label="Make a call" className="mb-2.5" />
+              <Button
+                label="Explore our services"
+                className="mb-2.5"
+                variant="secondary"
+              />
+            </div>
           </section>
         </div>
       </section>
+      <div className="hidden xl:block border-t border-b mb-[100] border-black py-4 mx-10 w-full overflow-x-auto justify-self-center">
+        <div className="flex items-center justify-between whitespace-nowrap font-light font-londrina text-[50px] gap-x-2">
+          <span>STRATEGY</span>
+          <span className="text-orange-700">·</span>
+          <span>RESEARCH</span>
+          <span className="text-orange-700">·</span>
+          <span>UI/UX</span>
+          <span className="text-orange-700">·</span>
+          <span>UI/UX</span>
+          <span className="text-orange-700">·</span>
+          <span>MOTION DESIGN</span>
+          <span className="text-orange-700">·</span>
+          <span>PRODUCT DESIGN</span>
+        </div>
+      </div>
       <section className="mb-9">
-        <div className="relative mb-5 w-36 h-6 mx-auto">
+        <div className="relative mb-5 xl:mb-24 w-36 h-6 mx-auto">
           <Image
             src="splash.svg"
             alt="Background Image"
@@ -144,11 +161,11 @@ export default function Home() {
         <h3 className="text-center px-2.5 mb-9 uppercase text-3xl md:text-5xl md:mb-[110]">
           Recent work
         </h3>
-        <div className="md:grid md:grid-cols-2 md:gap-[20px] md:px-[100] md:mb-[100]">
+        <div className="md:grid md:grid-cols-2 md:gap-[20px] md:px-[100] md:mb-[100] md:w-[702] mx-auto">
           <ShowcaseCard
             title="Service App"
             description="Product Design"
-            className="mb-5 md:mb-0"
+            className="mb-5 md:mb-0 md:text-left"
             src="/Service app.png"
             width={326.62}
             height={204.31}
@@ -157,7 +174,7 @@ export default function Home() {
           <ShowcaseCard
             title="Fintech app"
             description="Service Design"
-            className="mb-5 md:mb-0"
+            className="mb-5 md:mb-0 md:text-left"
             src="/fintech-app-1.png"
             width={324.71}
             height={205.84}
@@ -166,7 +183,7 @@ export default function Home() {
           <ShowcaseCard
             title="Game Shop"
             description="Branding"
-            className="mb-5 md:mb-0"
+            className="mb-5 md:mb-0 md:text-left"
             src="/game-shop.png"
             width={298.11}
             height={201.97}
@@ -175,7 +192,7 @@ export default function Home() {
           <ShowcaseCard
             title="Fintech App"
             description="Service Design"
-            className="mb-5 md:mb-0"
+            className="mb-5 md:mb-0 md:text-left"
             src="/fintech-app-2.png"
             width={325.67}
             height={202.37}
@@ -206,7 +223,7 @@ export default function Home() {
         <h3 className="text-center px-2.5 mb-9 text-3xl md:text-5xl md:mb-[100]">
           FAQs
         </h3>
-        <div className="md:px-[100] md:mb-[100]">
+        <div className="md:px-[100] md:mb-[100] xl:w-[742] xl:mx-auto">
           {FAQs.map((faq, index) => (
             <FAQ key={index} title={faq.title} description={faq.description} />
           ))}
@@ -228,14 +245,14 @@ export default function Home() {
           Testimonials
         </h3>
         <div className="md:grid md:grid-cols-3 md:gap-[24px]">
-        {testimonials.map((testimonial, index) => (
-          <Testimonial
-            key={index}
-            text={testimonial.text}
-            name={testimonial.name}
-            profession={testimonial.profession}
-          />
-        ))}
+          {testimonials.map((testimonial, index) => (
+            <Testimonial
+              key={index}
+              text={testimonial.text}
+              name={testimonial.name}
+              profession={testimonial.profession}
+            />
+          ))}
         </div>
       </section>
     </main>

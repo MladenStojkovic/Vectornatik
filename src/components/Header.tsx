@@ -10,8 +10,8 @@ const Header = () => {
   };
 
   return (
-    <header className="md:border-b-6 border-black md:mb-24">
-      <div className="container px-6 font-primary mx-auto py-6 flex justify-between items-center relative">
+    <header className="md:border-b-6 border-black md:mb-24 xl:mb-64 xl:border-none">
+      <div className="container px-6 xl:px-12 font-primary mx-auto py-2.5 flex justify-between items-center relative xl:border-6 border-black">
         <Image src="/logo.svg" alt="Vectornatik" width="127" height="25" />
 
         <button
