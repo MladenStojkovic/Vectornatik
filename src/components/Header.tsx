@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -12,7 +13,7 @@ const Header = () => {
   return (
     <header className="md:border-b-6 border-black md:mb-24 xl:mb-64 xl:border-none">
       <div className="container px-6 xl:px-12 font-primary mx-auto py-2.5 flex justify-between items-center relative xl:border-6 border-black">
-        <Image src="/logo.svg" alt="Vectornatik" width="127" height="25" />
+        <Link href="/"><Image src="/logo.svg" alt="Vectornatik" width="127" height="25" /></Link>
 
         <button
           aria-label="Toggle navigation menu"
@@ -32,7 +33,8 @@ const Header = () => {
           <ul className="flex flex-col md:flex-row text-center md:space-x-8 p-4">
             <li>
               <a
-                href="#"
+                href="work"
+                onClick={() => setIsMenuOpen(false)}
                 className="text-black hover:bg-gray-700 md:hover:bg-transparent block p-1.5"
               >
                 /Work
@@ -40,7 +42,8 @@ const Header = () => {
             </li>
             <li>
               <a
-                href="#"
+                href="about"
+                onClick={() => setIsMenuOpen(false)}
                 className="text-black hover:bg-gray-700 md:hover:bg-transparent block p-1.5"
               >
                 /About
@@ -48,7 +51,8 @@ const Header = () => {
             </li>
             <li>
               <a
-                href="#"
+                href="contact"
+                onClick={() => setIsMenuOpen(false)}
                 className="text-black hover:bg-gray-700 md:hover:bg-transparent block p-1.5"
               >
                 /Contact
@@ -76,7 +80,7 @@ const Header = () => {
             </li>
             <li className="ml-5">
               <a
-                href="#"
+                href="contact"
                 className="text-black hover:bg-gray-700 md:hover:bg-transparent block p-1.5"
               >
                 /Contact
