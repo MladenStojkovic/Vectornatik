@@ -1,8 +1,8 @@
-import type { Metadata } from "next";
 import { Roboto, Londrina_Solid, Sen } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
-import Footer from "@/components/Footer";
+import FooterWrapper from "@/components/FooterWrapper";
+import { metadata } from "./metadata";
 
 const londrinaSolid = Londrina_Solid({
   variable: "--font-londrina-solid",
@@ -20,10 +20,7 @@ const sen = Sen({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
-  title: "Vectornatic",
-  description: "Product design team based in Serbia",
-};
+export { metadata };
 
 export default function RootLayout({
   children,
@@ -37,7 +34,7 @@ export default function RootLayout({
       >
         <Header />
         {children}
-        <Footer />
+        <FooterWrapper />
       </body>
     </html>
   );
